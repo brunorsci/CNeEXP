@@ -1,0 +1,29 @@
+Package: CNVcExp
+Title: CNVcorrelatedExp
+Version: 0.0.0.9000
+Authors@R: c(
+  person(given = "Bruno-Rodrigo Assuncao", role = c("aut", "cre"), email = "brunorodrigoassuncao@gmail.com"),
+  person(given = "Lucas Brandao", role = c("ctb"),email = "lucas.cbrandao@ufpe.br"),
+  person(given = "Ronald Moura",  role = c("ctb"),email = "ronaldmoura1989@gmail.com"),
+  ))
+Description:  Complete workflow to obtain a full Copy Number Variations Anotations Upon Genomic Abnormalities of Acute Myeloid Leukemia
+    for genomic or exomic sequence data. This operates the identification of Copy Number Variations, annotations of this variants, correlations to genetic expression and Classifie the leukemic subtipes througt molecular patherns..
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Author: Bruno-Rodrigo Assuncao [aut, cre],
+  Lucas Brandao [ctb],
+  Ronald Moura [ctb],
+  Sergio Crovela [ctb]
+Imports:
+	cn.mops
+	GenomicFeatures
+	RMariaDB
+	org.Hs.eg.db
+	GenomicRanges
+	org.Hs.eg.db
+	biomaRt
+	doParallel
+importFrom(foreach,"%dopar%")
