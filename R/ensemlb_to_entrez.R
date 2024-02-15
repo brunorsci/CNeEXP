@@ -3,11 +3,11 @@ ensembl_to_entrez <- function(ensembl_ids, ensembl_dataset = "hsapiens_gene_ense
   ensembl_to_entrez <- biomaRt::getBM(
     attributes = c("ensembl_gene_id", "entrezgene_id"),
     filters = "ensembl_gene_id",
-    values = ensembl_ids,
+    values = positive_correlations$gene,
     mart = mart
   )
   return(ensembl_to_entrez)
 }
 
-df <- ensembl_to_entrez(p2_counts$Ensembl_ID)
-print(df)
+inputPosCor <- ensembl_to_entrez(as.vector(positive_correlations$gene))
+inputPosCor
